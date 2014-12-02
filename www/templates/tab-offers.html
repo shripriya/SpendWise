@@ -1,0 +1,26 @@
+<ion-view title="<div class='cst_header_title'>Offers Genie</div><div class='cst_header_subtitle'>Offers for Me</div>" class="cst_main_bg" hide-back-button="false" >
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <i class="fa  fa-hand-o-up fa-2x myIconStyle"></i>
+    </ion-nav-buttons>
+  <ion-content class="has-header">
+      <div class="contentContainer">
+          <h2 id="heading">Genie, What are the Best offers for me near by?</h2>
+          <div style="text-align: center" ng-click="getOffers()"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFkAAAA1CAYAAAAqPUeOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAzpJREFUeNrsWr1y00AQtoDCHeIFgtzRIVIzE7ujQy1V4uEBIE8QeAKHB2AsniD2E6DM0FvpoBOpKOWOVGE37M0smrN1Op3+yH4zN0oi67L3ae+7bzcZjQQCgUAgEAgEAoFAIBDcVzx++9Lve4wPBk5wAJeNkNwsFjACIPuDkNwcPsF4AiPuc5DewLX4LpNh5DA+bj9/S4VkdwSHcPkKgx96SPQEiM77Fu+jgSZySFJRBGZ177L54RAZHh8e+JTF48KtZ3gPxq+bzfVvkYvqEnECl9cwIsNHVpjtIB+JkFxObsQOOBsg2fMutdpzSAZuX8y2I3YgoT5ewkhsFglzLmnOusA4ZnWIpsKHv+jUdD7PEcFYDJwZLBS37hcTq+WQ4MpEk3uZUsIEdNDqkNGa0D5mjZGsIQMLgzVZqmCHjma0jbWEG740G8Tw++Z7iD2mWHdJU05xX9IaMuXT9yWOV5NgDOiCBYDat9ohJe9hvCt4Wy3hLJN8yiZlz6rqcsKyeEuylbCYIpo/0sRVJBct47mN5NQl+YJl6SkEcG6g27vI5oSvTVwBzReaaCR9VknAdI8E6GRmXqearEvyrSIHgphUPEQWBnZM6fhP+jovWyw7oNQLeE5XG3eCWlu7+eSKZNyGM0u5WZZs1S6QUPZmLiZz1YWzIon0e8K0s2tkRO7MFcEuSFbkhJCVU0uic9oFcYfk3nXxYLyAWJzHUat3MT488JiuRvD9j5vN9XebueC5NTyPDuBVywQjqW9wVzXV72jCJyuHsC189Ckz9j4ref/pA7eo03FZEdGrshqIWZA1M9G8hJn5kc4xkENYktVyLQsxNY6ytraKy95FQP5XFRI52S5czBU5kLTinHWbQ9wKYjGx6qJRNIhWJx2qxwaVmXWv5N6TrCE8LJTcSgquiNy0TTn470jWEF5aUgvJ1XU/IukINYcaZvHaRv9Fk/9m7FnhQFWdtZR+prL6iF6A+jeBWEguJ1i5lbQoC3TPZ9VjUsj6kJXvQnKJRCDJqpsWGjiMhKyjko5cSNaTe8J8d110+pdrr4fkTqnaCxqYHrP7tG356CvJTaPXlk8gEAgEAoFAIBAInOCPAAMAEJddbmqxKFcAAAAASUVORK5CYII=" height="35px"/></div>
+      </div>
+      <div class="contentContainer">
+          <h2 id="heading">Genie, What are the Best offers for me near by in Category:</h2>
+      </div>
+  	<ion-list>
+	    <ion-item ng-repeat="item in categories" ng-click="AddItem(item)">
+                <div>
+                    <img ng-src="{{item.imgName}}" style="float:left;">
+                    <h2 style="padding-left : 10px;font-weight: bold">{{item.desc}}</h2>
+                </div>
+        </ion-item>
+     </ion-list>
+  </ion-content>
+    <ion-footer-bar class="cogfooter">Cognizant &copy; 2014</ion-footer-bar>
+</ion-view>

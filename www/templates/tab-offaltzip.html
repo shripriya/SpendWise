@@ -1,0 +1,21 @@
+<ion-view title="<div class='cst_header_title'>SPEND GENIE</div><div class='cst_header_subtitle'>People Like Me</div>" class="cst_main_bg">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <form name="userPref" novalidate class="cst_main_bg_trans">
+        <ion-content class="has-header">
+            <br/>
+       <h2 id="heading">How is my group spending in this area?</h2>
+            <div id="hcontainer">
+                <div class="error-container" id="errorConsole" style="display:none;color:red"></div>
+                Enter Zip Code (<i class="fa fa-keyboard-o fa-fw"></i>)                     
+                <div class="col" style="padding:0 !important"><input name="zipcode" ng-pattern="/^[0-9]{1,7}$/" required id="zipCode" ng-model="person.zipCode" type="text" maxlength="5" size="5" class="zipcode"></div>
+                            <br/>           
+                <button id="saveDetails" class="button button-full button-positive" ng-click="AddItem(event)" >
+                    Continue
+                </button>
+            </div>
+        </ion-content>
+    </form>
+    <ion-footer-bar class="cogfooter">Cognizant &copy; 2014</ion-footer-bar>
+</ion-view>

@@ -1,0 +1,53 @@
+<ion-view title="<div class='cst_landing_header_title'>Spend Wise Genie</div>" class="cst_main_bg" hide-back-button="false" >
+
+    <ion-nav-buttons side="left">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFkAAAA1CAYAAAAqPUeOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAsVJREFUeNrsWYFxmzAUNb0OkA3qTFA2MN2AEegE8QZ1JyCZgHQCuxPgTgCdgHQCyASqdH3kVI4YIVAQ8Xt3OhyCv8Xj6+n9z2ZDEARBEARBEARBEMS1QghxQxbcEryVoyITbkk+in84kA13JEdKLlRGkw1HWixHJkeOjA7JyrwEh3LU4n/Uvm6CH1fKs8rah57zSjZK3yb7YaUkP8nR9JyPZTbHtHX2EpFobsIE6tqIzJmRqzKzEvY4Lp3ZwcyVVyLHTo72ppQ+/pLjHARBYxEzQ8ypUPP4YjMHvfCB5r/EnBLPZgIHg4wq5EhNrRbs2ZwoTDMa7mWPVVBciFlhnlvXBHfJyLDEows6Wl0i3PCh2SAbIDYdkKYa95fg/rY4hs7kQpEpD0f8qZbOV7mETq9IyV6OO01KdKegvvNDfrdsb1geIly70+zZ2Iw5a3LxDNk6a3OKET/umZeOBpbx/k0lotM7UNgbVmmHnkKim+GR6T6ATIqGpADXxohfjJSZSdXk1EwWbTbKJ3w7chNJkUFDG5bKvD/43LTZbrBB3aBo+YyjjW5+l7+3bPNJe9r5BHtWC/+Qe9N00pfUxEZP7gm5Sq6SjU/okBNNjJUtSG6NvcK/chxWRp9oPDHefgGCnfvcYAaiu1VZa8meO5d+wuYTanbphM2l7NjCbMBSzYFH/PbTWvoL6QjN0818r5GHyc8dyUK62jcpICbVyKnxOYMMhBYxpzaHdK+bsAV6mewID6seSWwqPHgtFayRcE3Xd53S9zeKltInrQ3WnuGLtB3fuWxsoe/FK5tabqv/V5/JyNhv6Mw1rSTAJpY412b1DnLSwKI9kuRhgtu2Z9mVBfzvxTG0bUytURTi/IkkD3fVIq2bFhoUKmcURT83lq++rkV/k5F9X765HumJK4ddtvjq5eKNMo6WjyAIgiAIgiCI94+/AgwANx7o9NuoOGYAAAAASUVORK5CYII=" height="35px" style="margin-left:-10px"/>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <i class="fa fa-users fa-2x myIconStyle"></i>
+    </ion-nav-buttons>
+    <form name="userPref" novalidate class="cst_main_bg_trans">
+        <ion-content class="has-header">
+           <div class="contentContainer">
+               <h2 id="heading">Genie, how are People like me spending in this area?</h2>
+                <div id="hcontainer">
+
+                    Share location (<i class="fa fa-map-marker fa-fw"></i>)
+
+                    <br/>					
+                    <div class="onoffswitch" align="center">
+					
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" ng-true-value="yes" ng-false-value="no" ng-model="person.shareLocationPref"
+                                       ng-change="shareLocation()">
+                        <label class="onoffswitch-label" for="myonoffswitch">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                            </label>
+                                    </div>
+
+
+                        <div align="center" style="color: grey;font-weight: bold;">
+                            (or)
+                                    </div>
+                    <br/>
+                               Enter Zip Code (<i class="fa fa-keyboard-o fa-fw"></i>)
+                                    <div class="col" style="padding:0 !important"><input name="zipcode" ng-pattern="/^[0-9]{1,7}$/" required id="zipCode" ng-model="person.zipCode" type="text" maxlength="5" size="5" class="zipcode"></div>
+
+                    <div clasds="error-container" id="locationWarn" style="display:none;color:red">Location service not working !</div>
+                    <div class="error-container" id="errorConsole" style="display:none;color:red">Please enter a valid zip code !</div>
+                    <div class="error-container"
+                         ng-show="userPref.zipcode.$invalid && userPref.submitted" style="color:red">Please enter a valid zip code !</div>
+
+                    <br/><br/>
+                    <button id="prevDetails" style="width: 45%;" class="button button-positive" ng-click="AddItem('tab.offers')" >
+                        Offers for me
+                    </button>
+                    <button id="saveDetails" style="float: right;width: 50%;" class="button button-positive" ng-click="AddItem('tab.group3')" >
+                        People like me
+                    </button>
+                </div>
+            </div>
+        </ion-content>
+    </form>
+    <ion-footer-bar class="cogfooter">Cognizant &copy; 2014</ion-footer-bar>
+</ion-view>

@@ -1,0 +1,70 @@
+<ion-view title="<div class='cst_header_title'>Offers Genie</div><div class='cst_header_subtitle'>Offers for Me</div>" class="cst_main_bg" hide-back-button="false" >
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <i class="fa  fa-hand-o-up fa-2x myIconStyle"></i>
+    </ion-nav-buttons>
+  <div id="merchantDtl" >
+            <ion-tabs  class="tabs-icon-top tabs-positive" >
+              <ion-tab title="Offer Details" icon-on="ion-ios7-filing-offer" icon-off="ion-ios7-filing-outline-offer">
+              
+                <ion-content has-header="true" padding="true">
+                    <h4 class="text-item-content">{{offerTitle}}</h4>
+                    <h5 class="titleHeader">{{offerDetails}}</h5>
+                    <div id="logo">
+                        <img src="{{pictureLink}}">
+                    </div>
+                </ion-content>
+            </ion-tab>
+            <ion-tab title="Map" icon-on="ion-ios7-filing-map" icon-off="ion-ios7-filing-outline-map">
+                <ion-content has-header="true" padding="true">
+                    <h4 class="titleHeader">{{merchantName}}</h4>
+                    <div id="merchantMap" ng-controller="merchantDtlCtrl1"></div>
+                    <div id="directions" ng-controller="directionsCtrl">
+                        <div style="font-size: 1.2em;" class="text-item-content" id ="showReviews"></div>
+                        <i style="font-size: 1.2em" class="titleHeader">Get Directions from my Location</i>
+                        <i class="fa fa-car fa-2x" style="float:right;color:grey"  ng-click="showDirections(1)"></i> 
+                        <br/>
+                    <div id="steps"></div>
+                    
+                    </div>
+                </ion-content>
+            </ion-tab>
+
+            <ion-tab title="Reviews" icon-on="ion-ios7-filing-review" icon-off="ion-ios7-filing-outline-review" ng-click="checkIfReviewLoad()">
+             
+                <ion-content has-header="true" padding="true">
+                    <div id="reviewDiv" ng-controller="reviewCtrl">
+                      <h4 class="titleHeader">{{merchName}}</h4>
+                      <div id="mrchRatings">
+                        <span ng-repeat="rating in ratings" style="text-align:left; font-weight: bold; font-size: .8em; color: #4a87ee"><span ng-if="rating.current">{{rating.current}} out of {{rating.max}}</span>
+                            <span ng-if="!rating.current">No ratings available</span>
+                          <div star-rating rating-value="rating.current" max="rating.max"></div>
+                        </span>
+                     </div>  
+                      <h4 class="titleHeader">Reviews</h4>
+                                <div ng-repeat="review in reviews">
+                                          <div style="width:100%;background-color: white;">                                        
+                                            <div style="text-align:left; font-weight: bold; font-size: .9em; color: #4a87ee">{{review.text}} </div>                                    
+                                            <div style="text-align:left; font-weight: regular; font-size: .8em; color: #4a87ee">By {{review.author_name}} </div>
+                                          </div>
+                                          <br/>
+                                  </div>
+                    
+                    </div>
+                </ion-content>
+            </ion-tab>
+
+            <!--ion-tab title="Trends" icon-on="ion-ios7-filing-trend" icon-off="ion-ios7-filing-outline-trend">
+                <ion-content has-header="true" padding="true">
+                  <div id = "twitterTrends" ng-controller="trendCtrl">
+
+                  </div>
+                    
+                </ion-content>
+            </ion-tab-->
+        </ion-tabs>
+      </div>
+
+    </ion-view>

@@ -1,0 +1,65 @@
+<!-- 
+  Create tabs with an icon and label, using the tabs-positive style. 
+  Each tab's child <ion-nav-view> directive will have its own 
+  navigation history that also transitions its views in and out.
+--><!--
+<ion-tabs class="tabs-icon-top">
+
+
+  <ion-tab title="My Group" icon="icon ion-android-friends" href="#/tab/group">
+    <ion-nav-view name="tab-group"></ion-nav-view>
+  </ion-tab>
+
+
+  <ion-tab title="USpend" icon="icon ion-cash" href="#/tab/spend">
+    <ion-nav-view name="tab-spend"></ion-nav-view>
+  </ion-tab>
+
+
+  <ion-tab title="UChoose" icon="icon ion-android-mixer" href="#/tab/choose">
+    <ion-nav-view name="tab-choose"></ion-nav-view>
+  </ion-tab>
+  
+  <ion-tab title="My Shortlists" icon="icon ion-bookmark" href="#/tab/shorts">
+    <ion-nav-view name="tab-shorts"></ion-nav-view>
+  </ion-tab>
+
+
+</ion-tabs>-->
+
+<ion-side-menus>
+
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+      <ion-nav-buttons side="right">
+      <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i></ion-nav-back-button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+	<header class="bar bar-header bar-stable" id="menuheader">
+     <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFkAAAA1CAYAAAAqPUeOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAsVJREFUeNrsWYFxmzAUNb0OkA3qTFA2MN2AEegE8QZ1JyCZgHQCuxPgTgCdgHQCyASqdH3kVI4YIVAQ8Xt3OhyCv8Xj6+n9z2ZDEARBEARBEARBEMS1QghxQxbcEryVoyITbkk+in84kA13JEdKLlRGkw1HWixHJkeOjA7JyrwEh3LU4n/Uvm6CH1fKs8rah57zSjZK3yb7YaUkP8nR9JyPZTbHtHX2EpFobsIE6tqIzJmRqzKzEvY4Lp3ZwcyVVyLHTo72ppQ+/pLjHARBYxEzQ8ypUPP4YjMHvfCB5r/EnBLPZgIHg4wq5EhNrRbs2ZwoTDMa7mWPVVBciFlhnlvXBHfJyLDEows6Wl0i3PCh2SAbIDYdkKYa95fg/rY4hs7kQpEpD0f8qZbOV7mETq9IyV6OO01KdKegvvNDfrdsb1geIly70+zZ2Iw5a3LxDNk6a3OKET/umZeOBpbx/k0lotM7UNgbVmmHnkKim+GR6T6ATIqGpADXxohfjJSZSdXk1EwWbTbKJ3w7chNJkUFDG5bKvD/43LTZbrBB3aBo+YyjjW5+l7+3bPNJe9r5BHtWC/+Qe9N00pfUxEZP7gm5Sq6SjU/okBNNjJUtSG6NvcK/chxWRp9oPDHefgGCnfvcYAaiu1VZa8meO5d+wuYTanbphM2l7NjCbMBSzYFH/PbTWvoL6QjN0818r5GHyc8dyUK62jcpICbVyKnxOYMMhBYxpzaHdK+bsAV6mewID6seSWwqPHgtFayRcE3Xd53S9zeKltInrQ3WnuGLtB3fuWxsoe/FK5tabqv/V5/JyNhv6Mw1rSTAJpY412b1DnLSwKI9kuRhgtu2Z9mVBfzvxTG0bUytURTi/IkkD3fVIq2bFhoUKmcURT83lq++rkV/k5F9X765HumJK4ddtvjq5eKNMo6WjyAIgiAIgiCI94+/AgwANx7o9NuoOGYAAAAASUVORK5CYII=' height="35px" style="margin-left:-10px"/> <h1 class="title">
+          Spend Wise Genie</h1>
+    </header>
+    <ion-content class="has-header" id="headerbg">
+      <ion-list class="custom_menu">
+        <ion-item nav-clear menu-close href="#/tab/group/step3">
+		<i class="fa fa-dollar fa-fw"></i> 
+          People Like me
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/tab/offers">
+		<i class="fa fa-hand-o-up fa-fw"></i> 		
+         Offers Genie
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/tab/group/step2">
+		<i class="fa fa-group fa-fw"></i> 	
+          My Group
+        </ion-item>
+
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
+

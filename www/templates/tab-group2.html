@@ -1,0 +1,49 @@
+<ion-view title="<div class='cst_landing_header_title'>Spend Wise Genie</div>" class="cst_main_bg" hide-back-button="false" hide-nav-bar="true">
+
+    <ion-nav-buttons side="left">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFkAAAA1CAYAAAAqPUeOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAsVJREFUeNrsWYFxmzAUNb0OkA3qTFA2MN2AEegE8QZ1JyCZgHQCuxPgTgCdgHQCyASqdH3kVI4YIVAQ8Xt3OhyCv8Xj6+n9z2ZDEARBEARBEARBEMS1QghxQxbcEryVoyITbkk+in84kA13JEdKLlRGkw1HWixHJkeOjA7JyrwEh3LU4n/Uvm6CH1fKs8rah57zSjZK3yb7YaUkP8nR9JyPZTbHtHX2EpFobsIE6tqIzJmRqzKzEvY4Lp3ZwcyVVyLHTo72ppQ+/pLjHARBYxEzQ8ypUPP4YjMHvfCB5r/EnBLPZgIHg4wq5EhNrRbs2ZwoTDMa7mWPVVBciFlhnlvXBHfJyLDEows6Wl0i3PCh2SAbIDYdkKYa95fg/rY4hs7kQpEpD0f8qZbOV7mETq9IyV6OO01KdKegvvNDfrdsb1geIly70+zZ2Iw5a3LxDNk6a3OKET/umZeOBpbx/k0lotM7UNgbVmmHnkKim+GR6T6ATIqGpADXxohfjJSZSdXk1EwWbTbKJ3w7chNJkUFDG5bKvD/43LTZbrBB3aBo+YyjjW5+l7+3bPNJe9r5BHtWC/+Qe9N00pfUxEZP7gm5Sq6SjU/okBNNjJUtSG6NvcK/chxWRp9oPDHefgGCnfvcYAaiu1VZa8meO5d+wuYTanbphM2l7NjCbMBSzYFH/PbTWvoL6QjN0818r5GHyc8dyUK62jcpICbVyKnxOYMMhBYxpzaHdK+bsAV6mewID6seSWwqPHgtFayRcE3Xd53S9zeKltInrQ3WnuGLtB3fuWxsoe/FK5tabqv/V5/JyNhv6Mw1rSTAJpY412b1DnLSwKI9kuRhgtu2Z9mVBfzvxTG0bUytURTi/IkkD3fVIq2bFhoUKmcURT83lq++rkV/k5F9X765HumJK4ddtvjq5eKNMo6WjyAIgiAIgiCI94+/AgwANx7o9NuoOGYAAAAASUVORK5CYII=" height="35px" style="margin-left:-10px"/>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <i class="fa fa-users fa-2x myIconStyle"></i>
+    </ion-nav-buttons>
+    <div id="homeLoader" class="homescreenLoader">
+    </div>
+    <div id="homeContentLoader" style="display: none">
+    <form name="userPref" novalidate class="cst_main_bg_trans">
+        <ion-content class="has-header">
+            <div class="contentContainer" >
+                <h2 id="heading">Please select your group:</h2>
+                <div class="demo">
+                    <p style="font-size:16px;color: #03623B">Slide or enter your age &nbsp;</p>
+                    <input class="dial" data-angleOffset=90 data-linecap=round value="35" data-width="40%" style="fgColor:'#f00'">
+                </div>
+
+                <br/>
+                <div class="list" style="clear: both;">
+                    <p style="font-size:16px;color: #03623B">Gender:</p>
+                    <label class="item item-radio" id="gender">
+                        <input ng-model="person.gender" type="radio" name="group" value="M">
+                        <div class="item-content"  align="center">
+                            Male <i class="fa fa-male fa-fw"></i>
+                        </div>
+                        <i class="radio-icon ion-checkmark"></i>
+                    </label>
+                    <label class="item item-radio" id="gender">
+                        <input ng-model="person.gender" type="radio" name="group" value="F">
+                        <div class="item-content"  align="center">
+                            Female <i class="fa fa-female fa-fw"></i>
+                        </div>
+                        <i class="radio-icon ion-checkmark"></i>
+                    </label>
+                    <br/>
+                    <button id="saveDetails" class="button button-full button-positive" ng-click="AddItem(event)" >
+                        Continue
+                    </button>
+                </div>
+            </div>
+        </ion-content>
+    </form>
+        <ion-footer-bar class="cogfooter">Cognizant &copy; 2014</ion-footer-bar>
+    </div>
+</ion-view>
+

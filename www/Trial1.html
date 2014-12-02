@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8' />
+    </head>
+    <body>
+        <!--Add a button for the user to click to initiate auth sequence -->
+        <button id="authorize-button" style="visibility: hidden">Authorize</button>
+        <script src="js/Jquery.min.js"></script>
+        <script type="text/javascript">
+
+            var oAuthCallBack = function (RESP) {
+                if (RESP !== undefined) {
+                    //document.getElementById('responseContent').innerHTML = RESP.access_token;
+                    console.log(RESP.access_token);
+                    var access_token = RESP.access_token;
+                    makeApiCall(access_token);
+                }
+            };
+
+            function getAccessToken() {
+                $.ajax({
+                    crossDomain: true,
+                    type: 'GET',
+                    url: 'http://oauthtokengenerator.appspot.com/app/request/generateToken', //URL.baseURL + serviceName,
+                    data: {
+                        expire_seconds: '60000',
+                        oAuthCallback: 'oAuthCallBack'
+                    },
+                    dataType: 'jsonp'
+                });
+            }
+            function makeApiCall(accessToken) {
+                $.ajax({
+                    url: 'https://www.googleapis.com/prediction/v1.6/projects/584298581388/trainedmodels/testmodel/predict?access_token=' + accessToken,
+                    data: null,
+                    success: function (resp) {
+                        console.log(resp);
+                        if (resp.error) {
+                            var contentType = "application/x-www-form-urlencoded; charset=utf-8";
+                        }
+                    },
+                    dataType: "jsonp"
+                });
+            }
+
+            function writeResponse(resp) {
+                console.log(resp);
+            }
+            getAccessToken();
+        </script>
+        <div id="content"></div>
+        <p>Retrieves your profile name using the Google Plus API.</p>
+    </body>
+</html>

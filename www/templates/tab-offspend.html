@@ -1,0 +1,33 @@
+<ion-view title="<div class='cst_header_title'>Offers Genie</div><div class='cst_header_subtitle'>Offers for Me</div>" class="cst_main_bg" hide-back-button="false" >
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <i class="fa  fa-hand-o-up fa-2x myIconStyle"></i>
+    </ion-nav-buttons>
+    <ion-content class="has-header">   
+        <div class="contentContainer">
+            <h2 id="heading">Predicted spend amount for your group is </h2>
+        </div>
+        <ion-list  class="transparentBg">
+            <ion-item ng-repeat="item in predictedSpend" ng-click="AddItem(item)">
+                <div sty>
+                    <h2 style="padding-left : 10px;font-weight: bolder;text-align: center;color: #ff4500">{{item.range | number:0}} <span style="color: #03623B;">Mex$ </span></h2>
+                </div>
+            </ion-item>
+        </ion-list>
+        <div class="contentContainer">            
+            <h2 id="heading">or Choose your Spending range</h2>
+        </div>
+        <ion-list>
+            <ion-item ng-repeat="item in spendrange" ng-click="AddItem(item)">
+                <div>
+                    <!--<img ng-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAATCAMAAABBexbDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RTA0ODY1Mzg2RkQwMTFFNDgyODRFMjExMzQ5NjQwRUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RTA0ODY1Mzk2RkQwMTFFNDgyODRFMjExMzQ5NjQwRUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpFMDQ4NjUzNjZGRDAxMUU0ODI4NEUyMTEzNDk2NDBFRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpFMDQ4NjUzNzZGRDAxMUU0ODI4NEUyMTEzNDk2NDBFRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pm/xFr0AAAB7UExURQCgs7Tj6Q+mtx6rvES5x+75+lrCzsPp7WnH0jOzwofS2/T7/Pr9/kG4xoPR2tDt8RSnufD5+7Pj6E29ynvO2Ea6yI/V3kW6yLjl6ji1xAqktuP19zSzwiywwJ7b4gWitMvs8Da0wyGsvTq2xByqu+/5+gOhtN7z9f////ey7kUAAAApdFJOU/////////////////////////////////////////////////////8AUvQghwAAAF1JREFUeNq8yEcOgCAABdFvQQXsvffC/U8oGxNh58ZJZvNQbvarIhSohBb6zj+ILKGUMk6IDwuGCZkr9xzA+Cj7qUk2p7ki0dg2lyKBPB7e8vSvrJrUYJMiC78FGADK+gbhldxADQAAAABJRU5ErkJggg==" style="float:left;">-->
+                    <h2 style="padding-left : 10px;font-weight: bold">{{item.range}} Mex$</h2>
+                </div>
+            </ion-item>
+            <ion-item></ion-item>
+        </ion-list>
+    </ion-content>
+    <ion-footer-bar class="cogfooter">Cognizant &copy; 2014</ion-footer-bar>
+</ion-view>

@@ -1,0 +1,50 @@
+<ion-view title="<div class='cst_header_title'>Spend Genie</div><div class='cst_header_subtitle'>Time Period</div>" class="cst_main_bg" hide-back-button="false" >
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <i class="fa  fa-dollar fa-2x myIconStyle"></i>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <div ng-bind="loader" style="text-align:center; font-weight: bold; font-size: 1.2em; color: #4a87ee">
+ 	 </div>
+
+    <div class="contentContainer">
+      <h2 id="heading">Select the time-period</h2>
+    </div>
+    <div class="list">
+      <div class="error-container" id="errorConsole" style="display:none">Please select a valid date !</div>
+      <ul class="list">
+        <li>
+          <label class="item item-input">
+            <div class="row">
+              <div class="col col-50" ><div class="input-label" style="font-size: 0.8em;">
+                From Date
+              </div>
+              </div>
+              <div class="col"><input type="text" id="fromDate" /></div>
+            </div>
+          </label>
+        </li>
+        <li>
+          <label class="item item-input">
+            <div class="row" s>
+              <div class="col col-50" ><div class="input-label" style="font-size: 0.8em;">
+                To Date
+              </div>
+              </div>
+              <div class="col" ><input type="text" id="toDate" /></div>
+            </div>
+          </label>
+        </li>
+
+      </ul>
+
+      <button id="saveDetails" class="button button-full button-positive" ng-click="AddItem(event)" >
+        Continue
+      </button>
+    </div>
+  </ion-content>
+  <ion-footer-bar class="cogfooter">Cognizant &copy; 2014</ion-footer-bar>
+</ion-view>
+

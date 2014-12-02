@@ -1,0 +1,36 @@
+<ion-view title="<div class='cst_header_title'>Spend Genie</div><div class='cst_header_subtitle'>People Like Me</div>" class="cst_main_bg" hide-back-button="false" >
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <i class="fa  fa-dollar fa-2x myIconStyle"></i>
+    </ion-nav-buttons>
+    <script id="contact-modal.html" type="text/ng-template">
+        <div class="modal">
+            <ion-content>
+                <div class="contentContainer">
+                    <h2 class="label-item-content">Your group</h2>
+                    <div class="label-item-content">Age: <span class="label-item-content"> {{userGroupData.age}}</span></div>
+                    <div class="label-item-content">Gender: <span class="label-item-content"> {{formattedGender}}</span></div>
+                    <div class="label-item-content">Category: <span class="label-item-content"> {{userGroupData.selectedSpendCatgDesc}}</span></div>
+                    <div class="label-item-content">Sub Category: <span class="label-item-content"> {{userGroupData.selectedSubCatgDesc}}</span></div>
+                    <br/>
+                    <button class="button button-full button-positive" ng-click="closeModal()">Close</button>
+                </div>
+            </ion-content>
+        </div>
+    </script>
+    <ion-content class="has-header">
+        <div ng-bind="loader" style="text-align:center; font-weight: bold; font-size: 1.2em; color: #4a87ee; padding-top:15px">
+        </div>
+        <div class="contentSpendContainer">
+            <button class="button button-full button-energized" ng-click="openModal()">Click here to view your group details</button>
+        </div>
+        <div id="barchart">
+        </div>
+        <br/><br/>
+    </ion-content>
+
+    <ion-footer-bar class="cogfooter">Cognizant &copy; 2014</ion-footer-bar>
+</ion-view>
+

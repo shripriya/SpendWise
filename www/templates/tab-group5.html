@@ -1,0 +1,39 @@
+<ion-view title="<div class='cst_header_title'>SPEND GENIE</div><div class='cst_header_subtitle'>People Like Me</div>" class="cst_main_bg">
+    <form name="userPref" novalidate class="cst_main_bg_trans">
+        <ion-content class="has-header">
+            <br/>
+
+            <div class="list">
+
+
+                <label class="item item-radio">
+                    <input ng-model="person.spendingTrend" type="radio" name="group" value="month">
+                    <div class="item-content">
+                        Month
+                    </div>
+                    <i class="radio-icon ion-checkmark"></i>
+                </label>
+                <label class="item item-radio">
+                    <input ng-model="person.spendingTrend" type="radio" name="group" value="week">
+                    <div class="item-content">
+                        Week
+                    </div>
+                    <i class="radio-icon ion-checkmark"></i>
+                </label>
+                <label class="item item-radio">
+                    <input ng-model="person.spendingTrend" type="radio" name="group" value="day">
+                    <div class="item-content">
+                        Day
+                    </div>
+                    <i class="radio-icon ion-checkmark"></i>
+                </label>
+
+                <button id="saveDetails" class="button button-full button-positive" ng-click="AddItem(event)" >
+                    Continue
+                </button>
+            </div>
+        </ion-content>
+    </form>
+    <ion-footer-bar class="cogfooter">Cognizant &copy; 2014</ion-footer-bar>
+</ion-view>
+
